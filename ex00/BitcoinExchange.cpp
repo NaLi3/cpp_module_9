@@ -6,7 +6,7 @@
 /*   By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 15:18:05 by ilevy             #+#    #+#             */
-/*   Updated: 2025/07/09 17:54:57 by ilevy            ###   ########.fr       */
+/*   Updated: 2025/07/09 19:41:10 by ilevy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -287,12 +287,12 @@ bool	BitcoinExchange::isValidValue(const std::string& value) const
 	double	val = strtod(value.c_str(), &end);
 	if (val < 0)
 	{
-		std::cout << "Error: not a positive number" << std::endl;
+		std::cout << "Error: not a positive number." << std::endl;
 		return (false);
 	}
 	if (val > 1000)
 	{
-		std::cout << "Error: too large a number" << std::endl;
+		std::cout << "Error: too large a number." << std::endl;
 		return (false);
 	}
 	return (end != value.c_str() && *end == '\0' && val >= 0);
